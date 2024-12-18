@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izmena zaposlenog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="asstes/images/logo-ll.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="in-header">
+            <div class="logo">
+                <a href="index.html"><img src="asstes/images/logo-ll.png" alt=""></a>
+            </div>
+            <div class="description">
+                <h3>Klinika za psihijatrijske bolesti "Dr Laza Lazarević"</h1>
+            </div>
+            <div class="meni">
+                <ul>
+                    <li><a href="novi-zaposleni.html">Dodaj novog zaposlenog</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <form id="editEmployeeForm">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" name="ime">
+
+        <label for="datumRodjenja">Datum Rođenja:</label>
+        <input type="date" id="datumRodjenja" name="datumRodjenja">
+
+        <label for="jmbg">JMBG:</label>
+        <input type="text" id="jmbg" name="jmbg">
+
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="odredjeno">Odredjeno</option>
+            <option value="neodredjeno">Neodredjeno</option>
+        </select>
+
+        <label for="pozicija">Pozicija:</label>
+        <input type="text" id="pozicija" name="pozicija">
+
+        <label for="odeljenje">Odeljenje:</label>
+        <input type="text" id="odeljenje" name="odeljenje">
+
+        <label for="godOdmor">Godine odmora:</label>
+        <input type="number" id="godOdmor" name="godOdmor">
+
+        <button type="submit">Izmeni</button>
+    </form>
+    
+    <footer>
+        <div class="in-footer">
+            <p>&copy; 2024 Klinika za psihijatrijske bolesti "Dr Laza Lazarević" | Mihailo Vlajković | 065/58-22-552</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaposleni - Klinika "Laza Lazarević</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="asstes/images/logo-ll.png" type="image/png">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="in-header">
+                <div class="logo">
+                    <a href="index.html"><img src="asstes/images/logo-ll.png" alt=""></a>
+                </div>
+                <div class="description">
+                    <h3>Klinika za psihijatrijske bolesti "Dr Laza Lazarević"</h1>
+                </div>
+                <div class="meni">
+                    <ul>
+                        <li><a href="novi-zaposleni.html">Dodaj novog zaposlenog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    
+        <section class="search">
+            <label for="search">Pretraži zaposlene:</label>
+            <input type="text" id="search" placeholder="Pretraži po imenu...">
+        </section>
+    
+    
+        <div class="section-tabela">
+            <div class="filtriranje">
+                <label for="departmentFilter">Filtriraj po odeljenju:</label>
+                <select id="departmentFilter" class="departmentStyle">
+                    <option value="">--Izaberite odeljenje--</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                    <option value="S">S</option>
+                    <option value="Dispanzer">Dispanzer</option>
+                    <option value="Adolescente">Adolescente</option>
+                    <option value="Za informacione i komunikacione tehnologije">Za informacione i komunikacione tehnologije</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+        
+                <label for="positionFilter">Filtriraj po poziciji:</label>
+                <select id="positionFilter" class="departmentStyle">
+                    <option value="">--Izaberite poziciju--</option>
+                    <option value="Glavna sestra">Glavna sestra</option>
+                    <option value="Doktor">Doktor</option>
+                    <option value="Gl. Tehnicar">Gl. Tehnicar</option>
+                    <option value="Informaticar">Informaticar</option>
+                    <option value="Statistika">Statistika</option>
+                    <option value="Psihijatar">Psihijatar</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+    
+                <label for="positionFilter">Filtriraj po statusu:</label>
+                <select id="statusFilter" class="departmentStyle">
+                    <option value="">--Izaberite poziciju--</option>
+                    <option value="Odredjeno">Odredjeno</option>
+                    <option value="Neodredjeno">Neodredjeno</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+            </section>
+            </div>
+        
+            <table id="employeesTable" class="employeesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ime</th>
+                        <th>Datum Rođenja</th>
+                        <th>JMBG</th>
+                        <th>Pol</th>
+                        <th>Status</th>
+                        <th>Kvalifikacija</th>
+                        <th>Pozicija</th>
+                        <th>Odeljenje</th>
+                        <th>Godine odmora</th>
+                        <th>Brisanje</th>
+                        <th>Izmena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dinamički popunjeni podaci -->
+                </tbody>
+            </table>
+        </div>
+        <div id="ukupnoZaposlenih" class="ukupnoZaposlenih"></div>
+    
+        <footer>
+            <div class="in-footer">
+                <p>&copy; 2024 Klinika za psihijatrijske bolesti "Dr Laza Lazarević" | Mihailo Vlajković | 065/58-22-552</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

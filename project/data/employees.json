@@ -1,0 +1,136 @@
+{
+  "employees": [
+    {
+      "id": "3055",
+      "ime": "Zdravko Durulovic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "2103979710314",
+      "pol": "Muško",
+      "status": "Neodredjeno",
+      "kvalifikacija": "Sredna skola",
+      "pozicija": "Informaticar",
+      "odeljenje": "Za informacione i komunikacione tehnologije",
+      "godOdmor": "40"
+    },
+    {
+      "id": "2279",
+      "ime": "Veljko Erdeljanin",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "2508005710163",
+      "pol": "Muško",
+      "status": "Odredjeno",
+      "kvalifikacija": "4 stepen",
+      "pozicija": "Informaticar",
+      "odeljenje": "Za informacione i komunikacione tehnologije",
+      "godOdmor": "40"
+    },
+    {
+      "id": "b512",
+      "ime": "Goran Stevic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "2803966710295",
+      "pol": "Muško",
+      "status": "Neodredjeno",
+      "kvalifikacija": "4 stepen",
+      "pozicija": "Informaticar",
+      "odeljenje": "Za informacione i komunikacione tehnologije",
+      "godOdmor": "40"
+    },
+    {
+      "id": "3353",
+      "ime": "Ivana Papic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "1204007756028",
+      "pol": "Zensko",
+      "status": "Neodredjeno",
+      "kvalifikacija": "Dr. Stomatologije",
+      "pozicija": "Statistika",
+      "odeljenje": "Za informacione i komunikacione tehnologije",
+      "godOdmor": "40"
+    },
+    {
+      "id": "c061",
+      "ime": "Marko",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "1812991710084",
+      "pol": "Muško",
+      "status": "Neodredjeno",
+      "kvalifikacija": "4 stepen",
+      "pozicija": "Statistika",
+      "odeljenje": "Za informacione i komunikacione tehnologije",
+      "godOdmor": "40"
+    },
+    {
+      "id": "fbdc",
+      "ime": "Jelena Matic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "1812991710084",
+      "pol": "Zensko",
+      "status": "Neodredjeno",
+      "kvalifikacija": "Doktor Psihijatrije",
+      "pozicija": "Psihijatar",
+      "odeljenje": "K",
+      "godOdmor": "40"
+    },
+    {
+      "id": "2000",
+      "ime": "Ana Abramovic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "2703989101461",
+      "pol": "Zensko",
+      "status": "Neodredjeno",
+      "kvalifikacija": "Doktor Psihijatrije",
+      "pozicija": "Psihijatar",
+      "odeljenje": "K",
+      "godOdmor": "40"
+    },
+    {
+      "id": "9613",
+      "ime": "Mihailo Vlajkovic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "2103979710314",
+      "pol": "Muško",
+      "status": "Odredjeno",
+      "kvalifikacija": "Sredna skola",
+      "pozicija": "Informaticar",
+      "odeljenje": "Za informacione i komunikacione tehnologije",
+      "godOdmor": "40"
+    },
+    {
+      "id": "74e8",
+      "ime": "Djordje Slavcev",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "2103979710314",
+      "pol": "Muško",
+      "status": "Neodredjeno",
+      "kvalifikacija": "4 stepen",
+      "pozicija": "Informaticar",
+      "odeljenje": "Za informacione i komunikacione tehnologije",
+      "godOdmor": "40"
+    },
+    {
+      "id": "bb38",
+      "ime": "Gordana Vlajkovic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "1812991710084",
+      "pol": "Zensko",
+      "status": "Neodredjeno",
+      "kvalifikacija": "Sredna skola",
+      "pozicija": "Fakture",
+      "odeljenje": "Fakture",
+      "godOdmor": "40"
+    },
+    {
+      "id": "fba6",
+      "ime": "Jovana Minic",
+      "datumRodjenja": "2024-12-18",
+      "jmbg": "2803966710295",
+      "pol": "Zensko",
+      "status": "Odredjeno",
+      "kvalifikacija": "Visa skola",
+      "pozicija": "Kadrovska",
+      "odeljenje": "Administracija",
+      "godOdmor": "40"
+    }
+  ]
+}

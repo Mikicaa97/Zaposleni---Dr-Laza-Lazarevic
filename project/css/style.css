@@ -1,0 +1,227 @@
+header{
+    width: 100%;
+    padding: 10px 0px;  
+    border-bottom: 1px solid #bbbbbb;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.in-header{
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 20%;
+}
+
+.logo img{
+    width: 45%;
+}
+
+/* .meni{
+    width: 80%;
+} */
+
+.meni ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.meni li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.description h3{
+    font-size: 20px;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+
+.search label{
+    font-size: 20px;
+}
+
+.search input{
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.search button{
+    background-color: #9ec0fa;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+}
+
+.search button:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.section-tabela{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.filtriranje{
+    width: 20%;
+    margin: 0px auto;
+    padding: 10px 10px;
+    background: #a6c3f5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.departmentStyle{
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #f0f5ff;
+}
+
+#app{
+    width: 100%;
+}
+
+.zebraHover{
+    background-color: #c3d9ff !important;
+}
+
+.employeesTable {
+    max-height: 300px; /* Maksimalna visina tabele */
+    max-width: 100%; /* Maksimalna širina tabele */
+    overflow-x: scroll; /* Horizontalni skrol */
+    overflow-y: scroll; /* Vertikalni skrol */
+    border: 1px solid #ccc; /* Opcionalno: okvir oko tabele */
+    margin: 0 auto; /* Centriraj tabelu, opcionalno */
+}
+
+.employeesTable table {
+    width: 100%; /* Osigurava da tabela zauzme sav raspoloživi prostor */
+    min-width: 600px; /* Minimalna širina tabele */
+    border-collapse: collapse; /* Uklanja razmake između ćelija */
+}
+
+.employeesTable th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd; /* Dodaj okvir za ćelije */
+}
+
+.employeesTable{
+    width: 90%;
+    margin: 0px auto;
+}
+
+.employeesTable button{
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.employeesTable button:hover{
+    color: #000;
+}
+
+.employeesTable thead tr{
+    background-color: #a6c3f5;
+}
+
+.glavnaKolona{
+    background-color: #9ec0fa ;
+    color: #fff;
+}
+
+table tr:nth-child(odd) {
+}
+  
+table tr:nth-child(even) {
+    background-color: #dce9ff;
+}
+
+td{
+    padding: 10px;
+    text-align: center;
+}
+
+input{
+    padding: 5px;
+}
+
+.novi-zaposleni-title h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dodajZaposlenog{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.dodajZaposlenog button{
+    width: 40%;
+    margin: 0px auto;
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    background-color: #9ec0fa;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dodajZaposlenog input{
+    padding: 10px;
+    border: 1px solid #bbbbbb;
+}
+
+.dodajZaposlenog button:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.2s ease-in;
+}
+
+.ukupnoZaposlenih{
+    text-align: center;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #000;
+    margin-top: 40px;
+}
+
+.in-footer{
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.in-footer p{
+    font-size: 20px;
+}
