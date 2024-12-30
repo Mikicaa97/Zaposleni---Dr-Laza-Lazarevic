@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaposleni - Klinika "Laza Lazarević</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="asstes/images/logo-ll.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="in-header">
+                <div class="logo">
+                    <a href="index.html"><img src="asstes/images/logo-ll.png" alt=""></a>
+                </div>
+                <div class="description">
+                    <h3>Klinika za psihijatrijske bolesti "Dr Laza Lazarević"</h1>
+                </div>
+                <div class="meni">
+                    <ul>
+                        <a href="novi-zaposleni.html">
+                            <li><img src="asstes/images/add-person.png" alt=""></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    
+        <section class="search">
+            <label for="search">Pretraži zaposlene:</label>
+            <input type="text" id="search" placeholder="Pretraži po imenu...">
+            <input type="text" id="searchJmbg" placeholder="Pretraži po jmbg-u...">
+        </section>
+    
+        <div id="ukupnoZaposlenih" class="ukupnoZaposlenih"></div>
+        <div class="section-tabela">
+            <div class="filtriranje">
+
+                <label for="stacionarFilter">Filtriraj po stacionaru:</label>
+                <select id="stacionarFilter" class="departmentStyle">
+                    <option value="">--Izaberite odeljenje--</option>
+                    <option value="Beograd">Beograd</option>
+                    <option value="Padinska skela">Padinska skela</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+
+                <label for="departmentFilter">Filtriraj po odeljenju:</label>
+                <select id="departmentFilter" class="departmentStyle">
+                    <option value="">--Izaberite odeljenje--</option>
+                    <option value="F">F</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                    <option value="ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+                    <option value="ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+                    <option value="ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA">ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA</option>
+                    <option value="PRVO ODELJENJE INTENZIVNE NEGE">PRVO ODELJENJE INTENZIVNE NEGE</option>
+                    <option value="DRUGO ODELJENJE INTENZIVNE NEGE">DRUGO ODELJENJE INTENZIVNE NEGE</option>
+                    <option value="Za informacione i komunikacione tehnologije">Za informacione i komunikacione tehnologije</option>
+                    <option value="KLINIČKO ODELJENJE ZA ADOLESCENTE">KLINIČKO ODELJENJE ZA ADOLESCENTE</option>
+                    <option value="ODELJENJE DNEVNE BOLNICE BEOGRAD">ODELJENJE DNEVNE BOLNICE BEOGRAD</option>
+                    <option value="ODELJENJE DNEVNE BOLNICE PADINSKA SKELA">ODELJENJE DNEVNE BOLNICE PADINSKA SKELA</option>
+                    <option value="DISPANZER">DISPANZER</option>
+                    <option value="ODELJENJE ZA PSIHOLOGIJU">ODELJENJE ZA PSIHOLOGIJU</option>
+                    <option value="ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU">ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU</option>
+                    <option value="FAKTURNA SLUŽBA">FAKTURNA SLUŽBA</option>
+                    <option value="KNJIGOVODSTVO">KNJIGOVODSTVO</option>
+                    <option value="ODELJENJE KADROVSKIH POSLOVA">ODELJENJE KADROVSKIH POSLOVA</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+        
+                <label for="positionFilter">Filtriraj po poziciji:</label>
+                <select id="positionFilter" class="departmentStyle">
+                    <option value="">--Izaberite poziciju--</option>
+                    <option value="Glavna sestra">Glavna sestra</option>
+                    <option value="Glavni tehnicar">Glavni tehnicar</option>
+                    <option value="Sestra">Sestra</option>
+                    <option value="Tehničar">Tehničar</option>
+                    <option value="Informaticar">Informaticar</option>
+                    <option value="Statistika">Statistika</option>
+                    <option value="Psihijatar">Psihijatar</option>
+                    <option value="V.D. Direktor">V.D. Direktor</option>
+                    <option value="Socijolog">Socijolog</option>
+                    <option value="Uprava">Uprava</option>
+                    <option value="Psiholog">Psiholog</option>
+                    <option value="Defektolog">Defektolog</option>
+                    <option value="Fizio terapeut">Fizio terapeut</option>
+                    <option value="Pravnik">Pravnik</option>
+                    <option value="Knjigovođa">Knjigovođa</option>
+                    <option value="Fakture">Fakture</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+    
+                <label for="positionFilter">Filtriraj po statusu:</label>
+                <select id="statusFilter" class="departmentStyle">
+                    <option value="">--Izaberite poziciju--</option>
+                    <option value="Odredjeno">Odredjeno</option>
+                    <option value="Neodredjeno">Neodredjeno</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+
+                <label for="zaposlenFilter">Filtriraj po statusu zaposlenja:</label>
+                <select id="zaposlenFilter" class="departmentStyle">
+                    <option value="">--Izaberite poziciju--</option>
+                    <option value="Zaposlen">Zaposlen</option>
+                    <option value="Nezaposlen">Nezaposlen</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+            </div>
+        
+            <table id="employeesTable" class="employeesTable">
+                <thead>
+                    <tr>
+                        <!-- <th>ID</th> -->
+                        <th>Ime i prezime</th>
+                        <th>Datum Rođenja</th>
+                        <th>JMBG</th>
+                        <th>Pol</th>
+                        <th>Početak radanog odnosa</th>
+                        <th>Kraj radnog odnosa</th>
+                        <th>U radnom odnosu</th>
+                        <th>Status</th>
+                        <th>Kvalifikacija</th>
+                        <th>Pozicija</th>
+                        <th>Odeljenje</th>
+                        <th>Stacionar</th>
+                        <!-- <th>Godine odmora</th> -->
+                        <th>Brisanje</th>
+                        <th>Izmena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dinamički popunjeni podaci -->
+                </tbody>
+            </table>
+        </div>
+        <!-- <div id="ukupnoZaposlenih" class="ukupnoZaposlenih"></div> -->
+    
+        <footer>
+            <div class="in-footer">
+                <p>&copy; 2024 Klinika za psihijatrijske bolesti "Dr Laza Lazarević" | Mihailo Vlajković | 065/58-22-552</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izmena zaposlenog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="asstes/images/logo-ll.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="in-header">
+            <div class="logo">
+                <a href="index.html"><img src="asstes/images/logo-ll.png" alt=""></a>
+            </div>
+            <div class="description">
+                <h3>Klinika za psihijatrijske bolesti "Dr Laza Lazarević"</h1>
+            </div>
+            <div class="meni">
+                <ul>
+                    <a href="novi-zaposleni.html">
+                        <li><img src="asstes/images/add-person.png" alt=""></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <form id="editEmployeeForm" class="dodajZaposlenog">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" required>
+
+        <label for="datumRodjenja">Datum rođenja:</label>
+        <input type="date" id="datumRodjenja" required>
+
+        <label for="jmbg">JMBG:</label>
+        <input type="text" id="jmbg" required>
+
+        <label for="pol">Pol:</label>
+        <input type="text" id="pol" required>
+
+        <label for="pocRadnog">Početak/Kraj radnog odnosa:</label>
+        <input type="text" id="pocRadnog" required>
+
+        <label for="krajRadnog">Kraj radnog odnosa:</label>
+        <input type="text" id="krajRadnog" required>
+
+        <label for="radiNeradi">Zaposlen / Nezaposlen</label>
+        <input type="text" id="radiNeradi" required>
+
+        <label for="status">Status:</label>
+        <input type="text" id="status" required>
+
+        <label for="kvalifikacija">Kvalifikacija:</label>
+        <input type="text" id="kvalifikacija" required>
+
+        <label for="pozicija">Pozicija:</label>
+        <select id="pozicija">
+            <option value="">--Izaberite poziciju--</option>
+            <option value="Glavna sestra">Glavna sestra</option>
+            <option value="Glavni tehnicar">Glavni tehnicar</option>
+            <option value="Sestra">Sestra</option>
+            <option value="Tehničar">Tehničar</option>
+            <option value="Informaticar">Informaticar</option>
+            <option value="Statistika">Statistika</option>
+            <option value="Psihijatar">Psihijatar</option>
+            <option value="V.D. Direktor">V.D. Direktor</option>
+            <option value="Socijolog">Socijolog</option>
+            <option value="Uprava">Uprava</option>
+            <option value="Psiholog">Psiholog</option>
+            <option value="Defektolog">Defektolog</option>
+            <option value="Fizio terapeut">Fizio terapeut</option>
+            <option value="Pravnik">Pravnik</option>
+            <option value="Knjigovođa">Knjigovođa</option>
+            <option value="Fakture">Fakture</option>
+        </select>
+    
+        <label for="odeljenje">Odeljenje:</label>
+        <select id="odeljenje">
+            <option value="">--Izaberite odeljenje--</option>
+            <option value="F">F</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="S">S</option>
+            <option value="ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+            <option value="ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+            <option value="ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA">ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA</option>
+            <option value="PRVO ODELJENJE INTENZIVNE NEGE">PRVO ODELJENJE INTENZIVNE NEGE</option>
+            <option value="DRUGO ODELJENJE INTENZIVNE NEGE">DRUGO ODELJENJE INTENZIVNE NEGE</option>
+            <option value="Za informacione i komunikacione tehnologije">Za informacione i komunikacione tehnologije</option>
+            <option value="KLINIČKO ODELJENJE ZA ADOLESCENTE">KLINIČKO ODELJENJE ZA ADOLESCENTE</option>
+            <option value="ODELJENJE DNEVNE BOLNICE BEOGRAD">ODELJENJE DNEVNE BOLNICE BEOGRAD</option>
+            <option value="ODELJENJE DNEVNE BOLNICE PADINSKA SKELA">ODELJENJE DNEVNE BOLNICE PADINSKA SKELA</option>
+            <option value="DISPANZER">DISPANZER</option>
+            <option value="ODELJENJE ZA PSIHOLOGIJU">ODELJENJE ZA PSIHOLOGIJU</option>
+            <option value="ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU">ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU</option>
+            <option value="FAKTURNA SLUŽBA">FAKTURNA SLUŽBA</option>
+            <option value="KNJIGOVODSTVO">KNJIGOVODSTVO</option>
+            <option value="ODELJENJE KADROVSKIH POSLOVA">ODELJENJE KADROVSKIH POSLOVA</option>
+        </select>
+    
+        <label for="stacionar">Stacionar:</label>
+        <select id="stacionar">
+            <option value="">--Izaberite stacionar--</option>
+            <option value="Beograd">Beograd</option>
+            <option value="Padinska skela">Padinska skela</option>
+        </select>
+
+        <!-- <label for="godOdmor">Godine odmora:</label>
+        <input type="number" id="godOdmor" required> -->
+
+        <button type="submit">Izmeni</button>
+    </form>
+    
+    <footer>
+        <div class="in-footer">
+            <p>&copy; 2024 Klinika za psihijatrijske bolesti "Dr Laza Lazarević" | Mihailo Vlajković | 065/58-22-552</p>
+        </div>
+    </footer>
+    <script src="js/edit.js" defer></script>
+</body>
+</html>
