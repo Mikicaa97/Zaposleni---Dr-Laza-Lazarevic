@@ -6,56 +6,119 @@
     <title>Zaposleni - Klinika "Laza Lazarević</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="asstes/images/logo-ll.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <header>
+            <div class="top-header">
+                <div class="contact">
+                    <p>Mihailo Vlajković: 065/58-22-552 - Veljko Erdeljanin: 062/19-93-985 - Goran Stević: 064/86-52-426</p>
+                </div>
+            </div>
             <div class="in-header">
                 <div class="logo">
                     <a href="index.html"><img src="asstes/images/logo-ll.png" alt=""></a>
                 </div>
                 <div class="description">
-                    <h3>Klinika za psihijatrijske bolesti "Dr Laza Lazarević"</h1>
+                    <h3>Klinika za psihijatrijske bolesti "Dr. Laza Lazarević"</h1>
                 </div>
                 <div class="meni">
                     <ul>
-                        <li><a href="novi-zaposleni.html">Dodaj novog zaposlenog</a></li>
+                        <a href="novi-zaposleni.html">
+                            <li><img src="asstes/images/add-person.png" alt=""></li>
+                        </a>
                     </ul>
                 </div>
             </div>
         </header>
     
+        <div class="zaposleni-title">
+            <h3>Pretraži zaposlene:</h3>
+        </div>
         <section class="search">
-            <label for="search">Pretraži zaposlene:</label>
             <input type="text" id="search" placeholder="Pretraži po imenu...">
+            <input type="text" id="searchJmbg" placeholder="Pretraži po jmbg-u...">
         </section>
     
-    
+        <div class="brojZaposlenih-stampanje">
+            <div id="ukupnoZaposlenih" class="ukupnoZaposlenih"></div>
+            <section class="print-section">
+                <button id="printBtn"><i class="fa fa fa-print"></i></button>
+            </section>
+        </div>
+
         <div class="section-tabela">
             <div class="filtriranje">
+                <label for="stacionarFilter">Filtriraj po stacionaru:</label>
+                <select id="stacionarFilter" class="departmentStyle">
+                    <option value="">--Izaberite odeljenje--</option>
+                    <option value="Beograd">Beograd</option>
+                    <option value="Padinska skela">Padinska skela</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+
                 <label for="departmentFilter">Filtriraj po odeljenju:</label>
                 <select id="departmentFilter" class="departmentStyle">
                     <option value="">--Izaberite odeljenje--</option>
+                    <option value="F">F</option>
                     <option value="K">K</option>
                     <option value="L">L</option>
                     <option value="M">M</option>
-                    <option value="F">F</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
                     <option value="S">S</option>
-                    <option value="Dispanzer">Dispanzer</option>
-                    <option value="Adolescente">Adolescente</option>
+                    <option value="ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+                    <option value="ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+                    <option value="ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA">ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA</option>
+                    <option value="PRVO ODELJENJE INTENZIVNE NEGE">PRVO ODELJENJE INTENZIVNE NEGE</option>
+                    <option value="DRUGO ODELJENJE INTENZIVNE NEGE">DRUGO ODELJENJE INTENZIVNE NEGE</option>
                     <option value="Za informacione i komunikacione tehnologije">Za informacione i komunikacione tehnologije</option>
+                    <option value="AMBULANTNO KLINIČKO ODELJENJE ZA ADOLESCENTE">AMBULANTNO KLINIČKO ODELJENJE ZA ADOLESCENTE</option>
+                    <option value="ODELJENJE DNEVNE BOLNICE BEOGRAD">ODELJENJE DNEVNE BOLNICE BEOGRAD</option>
+                    <option value="ODELJENJE DNEVNE BOLNICE PADINSKA SKELA">ODELJENJE DNEVNE BOLNICE PADINSKA SKELA</option>
+                    <option value="DISPANZER">DISPANZER</option>
+                    <option value="ODELJENJE ZA PSIHOLOGIJU">ODELJENJE ZA PSIHOLOGIJU</option>
+                    <option value="ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU">ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU</option>
+                    <option value="PRIJEMNI ŠALTER">PRIJEMNI ŠALTER</option>
+                    <option value="PRIJEMNA AMBULANTA ZA ADOLESCENTE">PRIJEMNA AMBULANTA ZA ADOLESCENTE</option>
+                    <option value="FAKTURNA SLUŽBA">FAKTURNA SLUŽBA</option>
+                    <option value="KNJIGOVODSTVO">KNJIGOVODSTVO</option>
+                    <option value="ODELJENJE KADROVSKIH POSLOVA">ODELJENJE KADROVSKIH POSLOVA</option>
+                    <option value="CENTAR ZA MENTALNO ZDRAVLJE">CENTAR ZA MENTALNO ZDRAVLJE AMBULANTA</option>
+                    <option value="CENTAR ZA MENTALNO ZDRAVLJE">CENTAR ZA MENTALNO ZDRAVLJE DNEVNI CENTAR</option>
+                    <option value="CENTAR ZA MENTALNO ZDRAVLJE">KABINET FORENZIKA MERE NA SLOBODI</option>
+                    <option value="UPRAVA KLINIKE">UPRAVA KLINIKE</option>
                     <!-- Dodaj druge opcije po potrebi -->
                 </select>
         
                 <label for="positionFilter">Filtriraj po poziciji:</label>
                 <select id="positionFilter" class="departmentStyle">
                     <option value="">--Izaberite poziciju--</option>
+                    <option value="Doktor medicine">Doktor medicine</option>
+                    <option value="Lekar specijalista psihijatar">Lekar specijalista psihijatar</option>
                     <option value="Glavna sestra">Glavna sestra</option>
-                    <option value="Doktor">Doktor</option>
-                    <option value="Gl. Tehnicar">Gl. Tehnicar</option>
+                    <option value="Glavni tehnicar">Glavni tehnicar</option>
+                    <option value="Medicinska Sestra">Medicinska Sestra</option>
+                    <option value="Medicinski Tehničar">Medicinski Tehničar</option>
                     <option value="Informaticar">Informaticar</option>
                     <option value="Statistika">Statistika</option>
                     <option value="Psihijatar">Psihijatar</option>
+                    <option value="Poslovni Sekretar">Poslovni Sekretar</option>
+                    <option value="Direktor Klinike">Direktor Klinike</option>
+                    <option value="Pomoćnik direktora za ljudske resurse">Pomoćnik direktora za ljudske resurse</option>
+                    <option value="Socijolog">Socijolog</option>
+                    <option value="Uprava">Uprava</option>
+                    <option value="Psiholog">Psiholog</option>
+                    <option value="Defektolog">Defektolog</option>
+                    <option value="Fizioterapeut">Fizioterapeut</option>
+                    <option value="Pravnik">Pravnik</option>
+                    <option value="Knjigovođa">Knjigovođa</option>
+                    <option value="Fakture">Fakture</option>
+                    <option value="Prijem">Prijem</option>
                     <!-- Dodaj druge opcije po potrebi -->
                 </select>
     
@@ -66,24 +129,81 @@
                     <option value="Neodredjeno">Neodredjeno</option>
                     <!-- Dodaj druge opcije po potrebi -->
                 </select>
-            </section>
+
+                <label for="zaposlenFilter">Filtriraj po statusu zaposlenja:</label>
+                <select id="zaposlenFilter" class="departmentStyle">
+                    <option value="">--Izaberite poziciju--</option>
+                    <option value="Zaposlen">Zaposlen</option>
+                    <option value="Nezaposlen">Nezaposlen</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+
+                <label for="aplikacijaFilter">Filtriraj po aplikaciji:</label>
+                <select id="aplikacijaFilter" class="departmentStyle">
+                    <option value="">--Izaberite staž--</option>
+                    <option value="Zdravstveni radnik">Zdravstveni radnik</option>
+                    <option value="Zdravstveni saradnik">Zdravstveni saradnik</option>
+                    <option value="Administrativni radnik">Administrativni radnik</option>
+                    <option value="Tehnički radnik">Tehnički radnik</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+
+                <label for="zaposlenStaz">Filtriraj po godini staža:</label>
+                <select id="stazFilter" class="departmentStyle">
+                    <option value="">--Izaberite staž--</option>
+                    <option value="5">5 godina</option>
+                    <option value="10">10 godina</option>
+                    <option value="15">15 godina</option>
+                    <option value="20">20 godina</option>
+                    <!-- Dodaj druge opcije po potrebi -->
+                </select>
+
+
+                <div class="checkbox-print">
+                    <h3>Izaberite kolone za štampu:</h3>
+                    <label><input type="checkbox" class="column-toggle" data-column="0" checked> Ime i prezime</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="1" checked> Datum Rođenja</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="2" checked> JMBG</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="3" checked> Pol</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="4" checked> Početak radnog odnosa</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="5" checked> Kraj radnog odnosa</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="6" checked> U radnom odnosu</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="7" checked> Status</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="8" checked> Stepen spreme</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="9" checked> Zvanje iz diplome</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="10" checked> Radno mesto po sistematizaciji</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="11" checked> Organizacione jedinice</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="12" checked> Aplikacija</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="13" checked> Stacionar</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="14" checked> Preostalo odmora</label>
+                    <label><input type="checkbox" class="column-toggle" data-column="15" checked> Ukupan staž</label>
+                </div>
+
             </div>
+            
         
             <table id="employeesTable" class="employeesTable">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Ime</th>
+                        <!-- <th>ID</th> -->
+                        <th>Ime i prezime</th>
                         <th>Datum Rođenja</th>
                         <th>JMBG</th>
                         <th>Pol</th>
+                        <th>Početak radanog odnosa</th>
+                        <th>Kraj radnog odnosa</th>
+                        <th>U radnom odnosu</th>
                         <th>Status</th>
-                        <th>Kvalifikacija</th>
-                        <th>Pozicija</th>
-                        <th>Odeljenje</th>
-                        <th>Godine odmora</th>
-                        <th>Brisanje</th>
+                        <th>Stepen spreme</th>
+                        <th>Zvanje iz diplome</th>
+                        <th>Radno mesto po sistematizaciji</th>
+                        <th>Organizacione jedinice</th>
+                        <th>Aplikacija</th>
+                        <th>Stacionar</th>
+                        <th>Preostalo odmora</th>
+                        <th>Ukupan staž</th>
                         <th>Izmena</th>
+                        <th>Brisanje</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -91,7 +211,15 @@
                 </tbody>
             </table>
         </div>
-        <div id="ukupnoZaposlenih" class="ukupnoZaposlenih"></div>
+        <h1>Šta dalje uraditi:</h1>
+        <p>Da mi na stampi prikaze samo kolone koje sam izabrao na filteru</p>
+        <p>Filter za stepen strucne spreme</p>
+        <p>checkbox da izaberu sta zele da im se prikaze prilikom stampanja</p>
+        <!-- <p>Kada unesem datum zaposlenja da mi ispise u sledecem polju koliki mu je radni staz u dan mesec godina - URADIO</p>
+        <p>Jubilarna - URADIO</p>
+        <p>Staz - Ukupan staz u zdravstvu - URADIO</p> -->
+        <!-- <p>Da dodam polje Aplikacija: da ima Zdravstveni radnik, zdravstveni saradnik, administrativni radnik, tehnicki ranik</p> -->
+        <!-- <div id="ukupnoZaposlenih" class="ukupnoZaposlenih"></div> -->
     
         <footer>
             <div class="in-footer">
@@ -100,6 +228,6 @@
         </footer>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
