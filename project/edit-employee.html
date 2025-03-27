@@ -18,36 +18,127 @@
             </div>
             <div class="meni">
                 <ul>
-                    <li><a href="novi-zaposleni.html">Dodaj novog zaposlenog</a></li>
+                    <a href="novi-zaposleni.html">
+                        <li><img src="asstes/images/add-person.png" alt=""></li>
+                    </a>
                 </ul>
             </div>
         </div>
     </header>
 
-    <form id="editEmployeeForm">
+    <form id="editEmployeeForm" class="dodajZaposlenog">
         <label for="ime">Ime:</label>
-        <input type="text" id="ime" name="ime">
+        <input type="text" id="ime" required>
 
-        <label for="datumRodjenja">Datum Rođenja:</label>
-        <input type="date" id="datumRodjenja" name="datumRodjenja">
+        <label for="datumRodjenja">Datum rođenja:</label>
+        <input type="date" id="datumRodjenja" required>
 
         <label for="jmbg">JMBG:</label>
-        <input type="text" id="jmbg" name="jmbg">
+        <input type="text" id="jmbg" required>
+
+        <label for="pol">Pol:</label>
+        <input type="text" id="pol" required>
+
+        <label for="pocRadnog">Početak radnog odnosa:</label>
+        <input type="text" id="pocRadnog" required>
+
+        <label for="krajRadnog">Kraj radnog odnosa:</label>
+        <input type="text" id="krajRadnog" required>
+
+        <label for="radiNeradi">Zaposlen / Nezaposlen</label>
+        <input type="text" id="radiNeradi" required>
 
         <label for="status">Status:</label>
-        <select id="status" name="status">
-            <option value="odredjeno">Odredjeno</option>
-            <option value="neodredjeno">Neodredjeno</option>
+        <input type="text" id="status" required>
+
+        <label for="kvalifikacija">Stepen spreme:</label>
+        <input type="text" id="kvalifikacija" required>
+
+        <label for="zvanje">Zvanje iz diplome:</label>
+        <input type="text" id="zvanje" required>
+
+        <label for="pozicija"><th>Radno mesto po sistematizaciji:</th></label>
+        <select id="pozicija">
+            <option value="">--Izaberite poziciju--</option>
+            <option value="Nema">Nema</option>
+            <option value="Doktor medicine">Doktor medicine</option>
+            <option value="Lekar specijalista psihijatar">Lekar specijalista psihijatar</option>
+            <option value="Glavna sestra">Glavna sestra</option>
+            <option value="Glavni tehnicar">Glavni tehnicar</option>
+            <option value="Medicinska Sestra">Medicinska Sestra</option>
+            <option value="Medicinski Tehničar">Medicinski Tehničar</option>
+            <option value="Informaticar">Informaticar</option>
+            <option value="Statistika">Statistika</option>
+            <option value="Psihijatar">Psihijatar</option>
+            <option value="Poslovni Sekretar">Poslovni Sekretar</option>
+            <option value="Direktor Klinike">Direktor Klinike</option>
+            <option value="Pomoćnik direktora za ljudske resurse">Pomoćnik direktora za ljudske resurse</option>
+            <option value="Socijolog">Socijolog</option>
+            <option value="Uprava">Uprava</option>
+            <option value="Psiholog">Psiholog</option>
+            <option value="Defektolog">Defektolog</option>
+            <option value="Fizioterapeut">Fizioterapeut</option>
+            <option value="Pravnik">Pravnik</option>
+            <option value="Knjigovođa">Knjigovođa</option>
+            <option value="Fakture">Fakture</option>
+            <option value="Prijem">Prijem</option>
+        </select>
+    
+        <label for="odeljenje">Odeljenje:</label>
+        <select id="odeljenje">
+            <option value="">--Izaberite odeljenje--</option>
+            <option value="Nema">Nema</option>
+            <option value="F">F</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="S">S</option>
+            <option value="ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+            <option value="ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU">ŽENSKO ODELJENJE ZA FORENZIČKU PSIHIJATRIJU</option>
+            <option value="ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA">ODELJENJE ZA PRIJEM I ZBRINJAVANJE URGENTNIH STANJA</option>
+            <option value="PRVO ODELJENJE INTENZIVNE NEGE">PRVO ODELJENJE INTENZIVNE NEGE</option>
+            <option value="DRUGO ODELJENJE INTENZIVNE NEGE">DRUGO ODELJENJE INTENZIVNE NEGE</option>
+            <option value="Za informacione i komunikacione tehnologije">Za informacione i komunikacione tehnologije</option>
+            <option value="AMBULANTNO KLINIČKO ODELJENJE ZA ADOLESCENTE">AMBULANTNO KLINIČKO ODELJENJE ZA ADOLESCENTE</option>
+            <option value="ODELJENJE DNEVNE BOLNICE BEOGRAD">ODELJENJE DNEVNE BOLNICE BEOGRAD</option>
+            <option value="ODELJENJE DNEVNE BOLNICE PADINSKA SKELA">ODELJENJE DNEVNE BOLNICE PADINSKA SKELA</option>
+            <option value="DISPANZER">DISPANZER</option>
+            <option value="ODELJENJE ZA PSIHOLOGIJU">ODELJENJE ZA PSIHOLOGIJU</option>
+            <option value="ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU">ODELJENJE ZA SOCIJALNI RAD I SPECIJALNU EDUKACIJU I REHABILITACIJU</option>
+            <option value="PRIJEMNI ŠALTER">PRIJEMNI ŠALTER</option>
+            <option value="PRIJEMNA AMBULANTA ZA ADOLESCENTE">PRIJEMNA AMBULANTA ZA ADOLESCENTE</option>
+            <option value="FAKTURNA SLUŽBA">FAKTURNA SLUŽBA</option>
+            <option value="KNJIGOVODSTVO">KNJIGOVODSTVO</option>
+            <option value="ODELJENJE KADROVSKIH POSLOVA">ODELJENJE KADROVSKIH POSLOVA</option>
+            <option value="CENTAR ZA MENTALNO ZDRAVLJE">CENTAR ZA MENTALNO ZDRAVLJE AMBULANTA</option>
+            <option value="CENTAR ZA MENTALNO ZDRAVLJE">CENTAR ZA MENTALNO ZDRAVLJE DNEVNI CENTAR</option>
+            <option value="CENTAR ZA MENTALNO ZDRAVLJE">KABINET FORENZIKA MERE NA SLOBODI</option>
+            <option value="UPRAVA KLINIKE">UPRAVA KLINIKE</option>
         </select>
 
-        <label for="pozicija">Pozicija:</label>
-        <input type="text" id="pozicija" name="pozicija">
+        <label for="aplikacija">Aplikacija:</label>
+        <select id="aplikacija">
+            <option value="">--Izaberite aplikaciju--</option>
+            <option value="Zdravstveni radnik">Zdravstveni radnik</option>
+            <option value="Zdravstveni saradnik">Zdravstveni saradnik</option>
+            <option value="Administrativni radnik">Administrativni radnik</option>
+            <option value="Tehnički radnik">Tehnički radnik</option>
+        </select>
+    
+        <label for="stacionar">Stacionar:</label>
+        <select id="stacionar">
+            <option value="">--Izaberite stacionar--</option>
+            <option value="Nema">Nema</option>
+            <option value="Beograd">Beograd</option>
+            <option value="Padinska skela">Padinska skela</option>
+        </select>
 
-        <label for="odeljenje">Odeljenje:</label>
-        <input type="text" id="odeljenje" name="odeljenje">
-
-        <label for="godOdmor">Godine odmora:</label>
-        <input type="number" id="godOdmor" name="godOdmor">
+        <label for="odmor">Preostalo odmora:</label>
+        <input type="number" id="odmor" required>
 
         <button type="submit">Izmeni</button>
     </form>
@@ -57,6 +148,6 @@
             <p>&copy; 2024 Klinika za psihijatrijske bolesti "Dr Laza Lazarević" | Mihailo Vlajković | 065/58-22-552</p>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/edit.js" defer></script>
 </body>
 </html>
