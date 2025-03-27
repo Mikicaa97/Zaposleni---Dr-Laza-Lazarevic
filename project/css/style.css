@@ -429,4 +429,7 @@ footer{
     .logo{
         width: 60%;
     }
+    .top-header{
+        display: none;
+    }
 }
